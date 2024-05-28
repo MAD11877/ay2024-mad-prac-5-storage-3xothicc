@@ -7,10 +7,9 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Random;
 
-public class DBHandler extends SQLiteOpenHelper {
+public class DatabaseHandler extends SQLiteOpenHelper {
 
     private static final int DatabaseVersion = 1;
 
@@ -26,7 +25,7 @@ public class DBHandler extends SQLiteOpenHelper {
     private static final String KeyDescription = "description";
     private static final String KeyFollowed = "followed";
 
-    public DBHandler(Context context) {
+    public DatabaseHandler(Context context) {
         super(context, DatabaseName, null, DatabaseVersion);
     }
 

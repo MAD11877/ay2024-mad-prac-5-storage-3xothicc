@@ -1,6 +1,5 @@
 package sg.edu.np.mad.madpractical5;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.TextView;
@@ -15,7 +14,7 @@ import androidx.core.view.WindowInsetsCompat;
 public class MainActivity extends AppCompatActivity {
 
     private User user;
-    private DBHandler dbHandler;
+    private DatabaseHandler dbHandler;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         // Initialize DBHandler
-        dbHandler = new DBHandler(this);
+        dbHandler = new DatabaseHandler(this);
 
         // Get the random integer from the intent
         int randomNumber = getIntent().getIntExtra("random_integer", 0);
